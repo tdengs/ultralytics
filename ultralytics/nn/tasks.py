@@ -13,6 +13,7 @@ from ultralytics.nn.modules import (
     C2,
     C3,
     C3TR,
+    CBAM,
     OBB,
     SPP,
     SPPF,
@@ -796,6 +797,8 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
                 n = 1
         elif m is AIFI:
             args = [ch[f], *args]
+        elif m is CBAM:
+            args = [ch[f], *args[0:]]
         elif m in (HGStem, HGBlock):
             c1, cm, c2 = ch[f], args[0], args[1]
             args = [c1, cm, c2, *args[2:]]
