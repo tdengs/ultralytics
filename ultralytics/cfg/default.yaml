@@ -119,7 +119,7 @@ erasing: 0.4 # (float) probability of random erasing during classification train
 crop_fraction: 1.0 # (float) image crop fraction for classification evaluation/inference (0-1)
 
 # Custom config.yaml ---------------------------------------------------------------------------------------------------
-cfg: # (str, optional) for overriding defaults.yaml
+cfg: ultralytics/cfg/models/v8/my-yolov8.yaml # (str, optional) for overriding defaults.yaml
 
 # Tracker settings ------------------------------------------------------------------------------------------------------
 tracker: botsort.yaml # (str) tracker type, choices=[botsort.yaml, bytetrack.yaml]
